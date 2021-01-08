@@ -19,4 +19,8 @@ export class WalletServiceService {
   {
     return this.http.get<IWallet>(this.url+"GetWalletInfo/"+id);
   }
+  makeWalletPayment(data:IWallet):Observable<IWallet>
+  {
+    return this.http.put<IWallet>(this.url+"PutWallet/"+data.user_id, data ,this.httpOptions);
+  }
 }

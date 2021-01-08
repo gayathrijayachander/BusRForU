@@ -10,6 +10,7 @@ import { WalletComponent } from './components/wallet/wallet.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WalletPaymentComponent } from './components/payment/wallet-payment/wallet-payment.component';
 import { PayPalPaymentComponent } from './components/payment/pay-pal-payment/pay-pal-payment.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PayPalPaymentComponent } from './components/payment/pay-pal-payment/pay
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

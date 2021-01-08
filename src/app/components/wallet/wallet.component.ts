@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {WalletServiceService} from '../../services/Wallet/wallet-service.service';
 import {IWallet} from '../../models/iwallet';
+
 @Component({
   selector: 'app-wallet',
   templateUrl: './wallet.component.html',

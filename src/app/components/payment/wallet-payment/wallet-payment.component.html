@@ -1,8 +1,13 @@
-<div class='container'>
+<div class='container' *ngIf='isShow'>
     <br />
     <img src="../../../../assets/wallet.png" alt="Wallet Image" height="125px" width="125px" class="rounded mx-auto d-block">
     <hr/>
-    <div style="font-size:24px; color: crimson; text-align: center;">Wallet Balance : <span class="fa fa-rupee" style="color: darkslategray;"> {{balance}} </span></div>
+    <div style="font-size:20px; color: crimson; text-align: center;">Wallet Balance : <span class="fa fa-rupee" style="color: darkslategray;"> {{balance}} </span></div>
     <br />
     <div style="text-align: center;"> <button class="btn btn-info" (click)="initPayment()"><i class="fas fa-wallet"></i> Pay From Wallet</button></div>
+</div>
+
+<div class="container" *ngIf='!isShow'>
+    <img src="../../../../assets/success.png" alt="Wallet Image" height="100px" width="100px" class="rounded mx-auto d-block">
+   <div style="text-align: center;"> <h4 style="color:green;">Your Payment was successfull</h4> </div>
 </div>
