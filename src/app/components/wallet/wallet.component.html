@@ -1,5 +1,48 @@
 <div class='container'>
-    <img src="../../../assets/wallet.png" alt="Wallet Image" height="150px" width="150px" class="rounded mx-auto d-block">
-    <hr/>
-    <div style="font-size:24px; color: crimson; text-align: center;"><span class="fa fa-rupee"> {{balance}} </span></div>
+    <img src="../../../assets/wallet.png" alt="Wallet Image" height="150px" width="150px"
+        class="rounded mx-auto d-block">
+    <hr />
+    <div style="font-size:24px; color: crimson; text-align: center;"><span class="fa fa-rupee"> {{balance}} </span>
+    </div>
+    <hr>
+    <div style="text-align: center;"><button class="btn btn-success" (click)="show()"><span
+                class="fa fa-rupee"></span>
+            Wallet Top Up</button>
+    </div>
+    <br>
+    <br>
+<div class="container" *ngIf = !isShow style="border: solid 2px green; text-align: center; border-radius: 5px;">
+    <form #topupform='ngForm' (ngSubmit)='saveAmount(topupAmount)'>
+        <div class='form-group'>
+            <label for="topupAmount">Amount </label><br>
+            <input type="number" id="topupAmount" name="topupAmount" [(ngModel)]='topupAmount' required />
+            <br><br>
+          <div style="text-align: center;"><button type="submit" [disabled]='topupform.invalid' class="btn btn-info">Proceed</button></div>
+        </div>
+    </form>
 </div>
+        <!--Modal-->
+        <!--<div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Wallet Top-UP</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <form #topupform='ngForm' (ngSubmit)='saveAmount(topupAmount)'>
+                    <div class="modal-body">
+                        <div class='form-group'>
+                            <label for="topupAmount">Amount :</label>
+                            <input type="number" id="topupAmount" name="topupAmount" [(ngModel)]='topupAmount' required/>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="text-align: center;">
+                        <button type="submit" [disabled]='topupform.invalid' class="btn btn-info">Proceed</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>-->

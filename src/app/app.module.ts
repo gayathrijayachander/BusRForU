@@ -13,6 +13,8 @@ import { PayPalPaymentComponent } from './components/payment/pay-pal-payment/pay
 import { FormsModule } from '@angular/forms';
 import { PaymentSuccessComponent } from './components/payment/payment-success/payment-success.component';
 import {NgxPrintModule} from 'ngx-print';
+import { WalletTopupSuccessComponent } from './components/wallet/wallet-topup-success/wallet-topup-success.component';
+import { WalletTopupComponent } from './components/wallet/wallet-topup/wallet-topup.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import {NgxPrintModule} from 'ngx-print';
     WalletComponent,
     WalletPaymentComponent,
     PayPalPaymentComponent,
-    PaymentSuccessComponent
+    PaymentSuccessComponent,
+    WalletTopupSuccessComponent,
+    WalletTopupComponent
   ],
   imports: [
     BrowserModule,

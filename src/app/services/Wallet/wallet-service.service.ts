@@ -7,6 +7,8 @@ import {IWallet} from '../../models/iwallet';
   providedIn: 'root'
 })
 export class WalletServiceService {
+
+  topupAmount : number ;
   
   url = 'http://localhost/BusRForU/api/wallet/';
   httpOptions = {
