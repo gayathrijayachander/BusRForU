@@ -17,7 +17,7 @@ export class WalletPaymentComponent implements OnInit {
   walletinfo : IWallet;
   balance : number ;
   billAmount : number ;
-  isShow : boolean = true;
+  
   constructor(private walletservice : WalletServiceService, private router: Router) 
   { 
     this.walletservice.getWalletBalance(this.id).subscribe((data: IWallet) => {this.walletinfo = data;  this.balance = data.Balance;});   
@@ -32,11 +32,10 @@ export class WalletPaymentComponent implements OnInit {
      if(this.balance >= this.billAmount)
      {
       this.walletinfo.Balance = this.balance - this.billAmount;
-      this.walletservice.makeWalletPayment(this.walletinfo).subscribe(() => {this.isShow = false});
+      this.walletservice.makeWalletPayment(this.walletinfo).subscribe(() => {this.router.navigate(['paymentSuccess'])});
      }
      else{
           alert("your wallet balance is less than the bill amount");
      }
   }
-
 }

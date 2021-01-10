@@ -11,6 +11,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { WalletPaymentComponent } from './components/payment/wallet-payment/wallet-payment.component';
 import { PayPalPaymentComponent } from './components/payment/pay-pal-payment/pay-pal-payment.component';
 import { FormsModule } from '@angular/forms';
+import { PaymentSuccessComponent } from './components/payment/payment-success/payment-success.component';
+import {NgxPrintModule} from 'ngx-print';
+
 
 @NgModule({
   declarations: [
@@ -20,13 +23,15 @@ import { FormsModule } from '@angular/forms';
     PaymentComponent,
     WalletComponent,
     WalletPaymentComponent,
-    PayPalPaymentComponent
+    PayPalPaymentComponent,
+    PaymentSuccessComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPrintModule
   ],
   providers: [],
   bootstrap: [AppComponent]

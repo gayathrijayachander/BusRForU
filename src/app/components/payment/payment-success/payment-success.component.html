@@ -1,0 +1,51 @@
+<div class="container" >
+    <img src="../../../../assets/success.png" alt="Wallet Image" height="100px" width="100px" class="rounded mx-auto d-block">
+   <div style="text-align: center;"> <h4 style="color:green;">Your Payment was successfull</h4> </div>
+</div>
+<br/>
+<br/>
+
+<div class="container" id="print-section" style="text-align: center; border: solid 2px darkblue;">
+    <br>
+    <h2 style="text-align: center; color: green;">E-Ticket</h2>
+    <br>
+    <hr>
+    <table>
+        <tr>
+            <td style="width: 275px; font-size:x-large;"><b>{{booking[0].Source}}-{{booking[0].destination}}</b></td>
+            <td style="width: 275px; font-size:x-large;"><b>{{booking[0].Date_of_Journey | date : 'longDate'}}</b></td>
+            <td style="width: 275px; font-size:x-large;"><b>Transaction ID : {{booking[0].tranction_id}}</b></td>
+        </tr>
+    </table>
+    <hr>
+    <hr>
+    <table>
+        <tr>
+            <th>Passenger Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Seat Number</th>
+            <hr>
+        </tr>
+        <br>
+        <tr *ngFor="let booking of booking" style="height: 50px;">
+            <td style="width: 200px; text-align: center; ">{{booking.First_Name}} {{booking.Last_Name}}</td>
+            <td style="width: 200px; text-align: center;">{{booking.Gender}}</td>
+            <td style="width: 200px; text-align: center;">{{booking.Age}}</td>
+            <td style="width: 200px; text-align: center;">{{booking.SeatNumber}}</td>
+           
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <td style="width: 275px; font-size:large;"><b>Bus Model : </b>{{booking[0].Bus_Model}}</td>
+            <td style="width: 275px; font-size:large;"><b>Bus Id : </b>{{booking[0].Bus_Model}}</td>
+            <td style="width: 275px; font-size:large;"><b>Total Fare : {{totalFare}}</b></td> 
+        </tr>
+    </table>
+    <hr>
+</div>
+<br>
+<div style="text-align: center;"> <button class="btn btn-info" printTitle="E-Ticket" printSectionId="print-section" ngxPrint><span class="fas fa-print"></span> Print my Ticket</button></div>
+<br>

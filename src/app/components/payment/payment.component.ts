@@ -1,5 +1,6 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import {PaymentServiceService,ICustomWindow} from '../../services/Payment/payment-service.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-payment',
@@ -39,7 +40,8 @@ export class PaymentComponent implements OnInit {
 
   constructor(
     private zone: NgZone,
-    private winRef: PaymentServiceService
+    private winRef: PaymentServiceService,
+    private router : Router
   ) {
     this._window = this.winRef.nativeWindow;
   }
@@ -54,6 +56,7 @@ export class PaymentComponent implements OnInit {
       // add API call here
       console.log(res);
       console.log(res.razorpay_payment_id);
+      this.router.navigate(['paymentSuccess'])
     });
   }
 
