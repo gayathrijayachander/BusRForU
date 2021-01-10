@@ -30,7 +30,7 @@ export class WalletComponent implements OnInit {
     console.log("amount ->" + this.topupAmount);
     this.amount = this.topupAmount;
     this.walletservice.topupAmount = this.topupAmount;
-    this.router.navigate(['walletTopup/',this.amount])
+    this.router.navigate(['walletTopup/',this.amount,this.id])
   }
   show(){
     this.isShow = false;

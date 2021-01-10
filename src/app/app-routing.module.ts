@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'paypal', component: PayPalPaymentComponent },
   { path: 'paymentSuccess', component: PaymentSuccessComponent },
   { path: 'payment', component: PaymentComponent },
-  { path: 'walletTopup/:amount', component: WalletTopupComponent },
+  { path: 'walletTopup/:amount/:id', component: WalletTopupComponent },
   { path: 'topupSuccess', component: WalletTopupSuccessComponent },
 ];
 

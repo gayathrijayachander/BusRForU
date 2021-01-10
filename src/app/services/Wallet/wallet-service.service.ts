@@ -25,4 +25,8 @@ export class WalletServiceService {
   {
     return this.http.put<IWallet>(this.url+"PutWallet/"+data.user_id, data ,this.httpOptions);
   }
+  makeWalletTopup(data:IWallet):Observable<IWallet>
+  {
+    return this.http.put<IWallet>(this.url+"PutWalletTopup/"+data.user_id,data,this.httpOptions);
+  }
 }

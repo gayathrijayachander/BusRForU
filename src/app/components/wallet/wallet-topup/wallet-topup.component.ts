@@ -2,6 +2,7 @@ import { Component, OnInit, NgZone } from '@angular/core';
 import {PaymentServiceService,ICustomWindow} from '../../../services/Payment/payment-service.service';
 import {WalletServiceService} from '../../../services/Wallet/wallet-service.service'
 import {ActivatedRoute, Router} from '@angular/router';
+import { IWallet } from 'src/app/models/iwallet';
 
 @Component({
   selector: 'app-wallet-topup',
@@ -10,7 +11,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class WalletTopupComponent implements OnInit {
 
-  amount : number = null;
+
   ngOnInit(): void {
     
   }
@@ -22,12 +23,17 @@ export class WalletTopupComponent implements OnInit {
     private paymentservice: PaymentServiceService,
     private router : Router, private walletservice : WalletServiceService , private route : ActivatedRoute) 
   {
-    this.amount = this.walletservice.topupAmount ;
-    this._window = this.paymentservice.nativeWindow;
-  
+    this._window = this.paymentservice.nativeWindow; 
   }
 
   topup :number = + this.route.snapshot.paramMap.get('amount');
+  id : number = + this.route.snapshot.paramMap.get('id');
+  data : IWallet = {
+    Wallet_id : null,
+    user_id: this.id,
+    Balance: this.topup,
+    SignUp : null
+  }
   public options: any = {
     key: 'rzp_test_QvrExmj5fby6T6', // add razorpay key here
     name: 'BusRForU',
@@ -61,6 +67,7 @@ export class WalletTopupComponent implements OnInit {
       // add API call here
       console.log(res);
       console.log(res.razorpay_payment_id);
+      this.walletservice.makeWalletTopup(this.data).subscribe(()=>{console.log("done");});
       this.router.navigate(['topupSuccess']);
     });
   }
