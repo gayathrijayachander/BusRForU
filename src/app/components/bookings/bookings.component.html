@@ -1,0 +1,25 @@
+ 
+<table class="table table-striped">
+    
+        <tr>
+            <td>Booking Id</td>
+            <td>From</td>
+            <td>To</td>
+            <td>Departure Date</td>
+            
+            
+        </tr>
+    
+
+        <tr *ngFor="let b of book">
+            <td scope="row">{{b.Booking_Id}}</td>
+            <td scope="row">{{b.Source}}</td>
+            <td scope="row">{{b.destination}}</td>
+            <td scope="row">{{b.Date_of_Journey}}</td>
+            
+            
+            <button class="btn btn-primary">Print</button>
+            
+        </tr>
+    
+</table>

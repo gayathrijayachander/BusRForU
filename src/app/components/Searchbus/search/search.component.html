@@ -1,0 +1,45 @@
+<div class="b-dashboard-form">
+    
+    
+ <form #searchForm='ngForm' >
+    <div class="form-row align-items-center">
+        <div class="col-auto">
+        <label class="sr-only" for='src'>From: </label>
+        <input type='text' id='src' name='src' class="form-control mb-2"    placeholder='Enter source' [(ngModel)] ='bus.from'  required #fromcontrol='ngModel'/>
+    
+        <div *ngIf=' fromcontrol.invalid && fromcontrol.touched'>
+            <span class="help-block alert-danger" *ngIf='fromcontrol.errors.required'>
+                Source is Required
+            </span>
+        </div>
+        </div>
+    
+        <div class="col-auto">
+        <label class="sr-only" for='dest'>To: </label>
+        <input type='text' id='dest' name='dest' class="form-control mb-2" placeholder='Enter dest' required [(ngModel)] ='bus.to' #fromcontrol='ngModel'/>
+        <div *ngIf=' fromcontrol.invalid && fromcontrol.touched'>
+            <span class="help-block alert-danger" *ngIf='fromcontrol.errors.required'>
+                Destination is Required
+            </span>
+           
+        </div>
+        </div>
+    
+        <div class="col-auto">
+        <label class="sr-only" for='dj'>Date of Journey: </label>
+        <input type='date'  id='dj' name='dj' class="form-control mb-2" required [(ngModel)] ='bus.traveldate' #fromcontrol='ngModel'/>
+        <div *ngIf=' fromcontrol.invalid && fromcontrol.touched'>
+            <span class="help-block alert-danger" *ngIf='fromcontrol.errors.required'>
+                Date is Required
+            </span>
+           
+        </div>
+        </div>
+    
+        <!-- [routerLink]="['/buslist/',bus.source,bus.destination,bus.date]"  -->
+        <button type='submit' class="btn-info" [routerLink]="['/buslist/',bus.from,bus.to,bus.traveldate]" [disabled]='searchForm.invalid'>Search</button>
+    </div>
+    </form>
+    
+    <br/><br/>
+</div>
