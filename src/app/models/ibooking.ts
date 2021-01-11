@@ -13,6 +13,10 @@ export interface IBooking {
     Date_of_Journey : Date;
     SeatNumber : number;
     Bus_Model : string;   
+<<<<<<< HEAD
     Booked_Seats : string;
+=======
+   
+>>>>>>> 8567de71f36e80ed04cda076612e785f66a171fe
 
 }

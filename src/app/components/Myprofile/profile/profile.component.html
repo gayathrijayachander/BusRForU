@@ -1,0 +1,49 @@
+
+ <div class="col-md-4 offset-4 mt-6 card" style="margin-top: 10px;background :seashell">    
+     <div>    
+        <h1 class="h1 text-center">My Profile</h1>  
+       <form >   
+
+        <div class='form-group' >
+          <label for='id'>Id: </label>
+          {{user.user_id}}
+          
+      </div>
+
+
+         <div class='form-group' >
+           <label for='id'>First Name: </label>
+           {{user.First_Name}}
+           
+       </div>
+       <div class='form-group' >
+           <label for='id'>Last Name: </label>
+           {{user.Last_Name}}
+           
+       </div>
+     
+       <div class='form-group'>
+           <label for='Name'>Email:</label>
+           {{user.Email_id}}
+           
+       </div>
+       
+     <div>
+         <label for='Location'>Address:</label>
+             {{user.Address}}
+     </div>
+     
+       <br>
+       <div>
+           <label for='Contact'>Contact No : &nbsp;</label>
+               {{user.Contact_Number}}
+       </div>
+       
+       <div>
+         <button type="submit" class=" btn-info " [routerLink]="['/edit/',m]" >Edit   </button>    
+       </div>
+          
+          
+        </form>  
+       </div>  
+     </div>

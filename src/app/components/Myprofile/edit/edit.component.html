@@ -1,0 +1,68 @@
+
+
+<div class="col-md-4 offset-4 mt-6 card" style="margin-top: 10px;background :seashell">    
+    <div >    
+       <h1 class="h1 text-center">My Profile</h1>  
+      <form #userForm='ngForm' (ngSubmit)='saveUser(user)'>   
+        
+        
+        
+        
+        
+        <div class='form-group'   >
+          <label for='First_Name'>First Name: </label>
+          <input  type='text' id='First_Name' name='First_Name' class="form-control" required [(ngModel)]='user.First_Name' #namecontrol='ngModel' />
+          <!-- <span class="help-block alert-danger" *ngIf='idcontrol.touched && idcontrol.invalid'>
+              ID Cannot be blank
+          </span> -->
+      </div>
+      <div class='form-group' >
+          <label for='Last_Name'>Last Name: </label>
+          <input  type='text' id='Last_Name' name='Last_Name' class="form-control" required  [(ngModel)]='user.Last_Name' #namecontrol='ngModel'  />
+          <!-- <span class="help-block alert-danger" *ngIf='idcontrol.touched && idcontrol.invalid'>
+              ID Cannot be blank
+          </span> -->
+      </div>
+    
+      <div class='form-group'>
+          <label for='Email'>Email &nbsp;</label>
+          <input  type='email' id='Email' name='Email' class="form-control" [(ngModel)]='user.Email_id' readonly  />
+          
+      </div>
+      <!--<div>Gender</div>
+      <div class='form-group'>
+          <label for='Name'>Male </label>
+          <input  type='radio' id='Name' name='Name' disabled  />
+          <label for='Name'>Female </label>
+          <input  type='radio' id='Name' name='Name' disabled  />
+          
+      </div>
+
+      <div>
+        <label for='Location'>Dob &nbsp;</label>
+        <input  type='date' id='Location' name='Location'class="form-control" /><br>
+        -->
+    
+    <div>
+        <label for='Address'>Address &nbsp;</label>
+        <input  type='text' id='Address' name='Address'class="form-control" [(ngModel)]='user.Address' /><br>
+    </div>
+    
+      <div>
+          <label for='Contact_Number'>Contact No &nbsp;</label>
+          <input  type='tel' id='Contact_Number' name='Contact_Number'class="form-control" [(ngModel)]='user.Contact_Number' required/><br>
+      </div>
+      
+      <div>
+        <button type="submit" class=" btn-info" >Save </button>    
+      
+
+      
+      </div>
+         
+         
+       </form>  
+      
+      <button type="submit" class=" btn-info"  style="float: right;" [routerLink]="['/profile/',mail]">Cancel </button>    
+      </div>  
+    </div>
