@@ -13,6 +13,11 @@ import { PayPalPaymentComponent } from './components/payment/pay-pal-payment/pay
 import { FormsModule } from '@angular/forms';
 import { PaymentSuccessComponent } from './components/payment/payment-success/payment-success.component';
 import {NgxPrintModule} from 'ngx-print';
+import { RegisterComponent } from './components/register/register.component';
+import { ChangePasswordComponent } from './components/change-password/change-password.component';
+import { AddBusComponent } from './components/Admin/add-bus/add-bus.component';
+import { DeleteBusComponent } from './components/Admin/delete-bus/delete-bus.component';
+import { EditBusComponent } from './components/Admin/edit-bus/edit-bus.component';
 
 
 @NgModule({
@@ -24,7 +29,12 @@ import {NgxPrintModule} from 'ngx-print';
     WalletComponent,
     WalletPaymentComponent,
     PayPalPaymentComponent,
-    PaymentSuccessComponent
+    PaymentSuccessComponent,
+    RegisterComponent,
+    ChangePasswordComponent,
+   AddBusComponent,
+   DeleteBusComponent,
+   EditBusComponent
   ],
   imports: [
     BrowserModule,
