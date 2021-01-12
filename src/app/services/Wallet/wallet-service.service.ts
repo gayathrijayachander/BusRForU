@@ -7,13 +7,9 @@ import {IWallet} from '../../models/iwallet';
   providedIn: 'root'
 })
 export class WalletServiceService {
-<<<<<<< HEAD
-
 
   topupAmount : number ;
 
-=======
->>>>>>> 8329623ab4833409c7083fafbe4b8f835cafab4b
   
   url = 'http://localhost/BusRForU/api/wallet/';
   httpOptions = {
@@ -30,13 +26,10 @@ export class WalletServiceService {
   {
     return this.http.put<IWallet>(this.url+"PutWallet/"+data.user_id, data ,this.httpOptions);
   }
-<<<<<<< HEAD
 
   makeWalletTopup(data:IWallet):Observable<IWallet>
   {
     return this.http.put<IWallet>(this.url+"PutWalletTopup/"+data.user_id,data,this.httpOptions);
   }
 
-=======
->>>>>>> 8329623ab4833409c7083fafbe4b8f835cafab4b
 }

@@ -11,6 +11,7 @@ import { SignupServiceService } from 'src/app/services/Signupservice/sign-up.ser
 })
 export class RegisterComponent implements OnInit {
   signup : ISignup ={
+    user_id : null,
     First_Name : null,
     Last_Name : null,
     Email_id : null,
