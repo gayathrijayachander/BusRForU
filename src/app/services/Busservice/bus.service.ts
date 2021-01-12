@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient,HttpClientXsrfModule,HttpHeaders} from '@angular/common/http';
 import {Observable,of} from 'rxjs' ;
-import {IBus} from '../../Models/iadmin';
+import {IAdmin} from '../../Models/iadmin';
 import { IEdit } from '../../Models/iedit';
 
 @Injectable({
@@ -17,19 +17,19 @@ export class BusServiceService {
 
   constructor(private http:HttpClient) { }
 
-  addbus(bus: IBus): Observable<IBus>{
-    return this.http.post<IBus>(this.url+"PostBus",bus, this.httpOptions );
+  addbus(bus: IAdmin): Observable<IAdmin>{
+    return this.http.post<IAdmin>(this.url+"PostBus",bus, this.httpOptions );
   }
     
-  deletebus(busid : number) :Observable<IBus>{
-    ​​​​​ return this.http.delete<IBus>(this.url+"DeleteBus/" +busid); 
+  deletebus(busid : number) :Observable<IAdmin>{
+    ​​​​​ return this.http.delete<IAdmin>(this.url+"DeleteBus/" +busid); 
   }​​​​​
  
 editbus(bus: IEdit): Observable<IEdit>{
   return this.http.put<IEdit>(this.url+"PutBus/" +bus.Bus_Id , bus, this.httpOptions );
 }
-getData(id:number): Observable<IBus>{​​​​​
-  return this.http.get<IBus>(this.url+"GetBus/" + id);
+getData(id:number): Observable<IAdmin>{​​​​​
+  return this.http.get<IAdmin>(this.url+"GetBus/" + id);
 }​​​​​
 
 

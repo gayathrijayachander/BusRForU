@@ -1,4 +1,4 @@
-export interface IBus {
+export interface IAdmin {
     Bus_Model : string;
     Date : Date;
     Depart_Time  : string;

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IBus } from 'src/app/Models/iadmin';
+import { IAdmin} from 'src/app/Models/iadmin';
 import {BusServiceService} from 'src/app/services/Busservice/bus.service';
 import {Router} from '@angular/router';
 import {NgForm} from '@angular/forms';

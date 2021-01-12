@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {NgForm} from '@angular/forms';
-import { IBus } from 'src/app/Models/iadmin';
+import { IAdmin } from 'src/app/Models/iadmin';
 import {BusServiceService} from 'src/app/services/Busservice/bus.service';
 
 @Component({
@@ -13,7 +13,7 @@ import {BusServiceService} from 'src/app/services/Busservice/bus.service';
 
 export class AddBusComponent implements OnInit {
 
-  bus : IBus ={
+  bus : IAdmin ={
     Bus_Model :null,
     Date : null,
     Depart_Time  :null,
@@ -38,7 +38,7 @@ addbus() {
   );
 }
 
-savebus(bus : IBus): void {
+savebus(bus : IAdmin): void {
   this.bus=bus;
   this.addbus();
 }

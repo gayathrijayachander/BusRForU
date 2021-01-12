@@ -18,6 +18,8 @@ import{ChangePasswordComponent} from './components/change-password/change-passwo
 import{AddBusComponent} from './components/Admin/add-bus/add-bus.component';
 import {EditBusComponent} from './components/Admin/edit-bus/edit-bus.component';
 import {DeleteBusComponent} from './components/Admin/delete-bus/delete-bus.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 
 const routes: Routes = [
@@ -41,6 +43,8 @@ const routes: Routes = [
  {​​​​​ path:'edit/:id', component:EditBusComponent }​​​​​,
  {path : 'edit-bus',component : EditBusComponent},
  {path : 'delete-bus',component : DeleteBusComponent},
+ { path: 'resetpassword/:mail', component: ResetPasswordComponent },
+ { path: 'forgotpassword', component: ForgotPasswordComponent },
 ];
 
 @NgModule({
