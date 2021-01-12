@@ -1,60 +1,64 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">BusRForU</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">BusRForU</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-          <a class="nav-link" href="#">Bus Hire <span class="sr-only">(current)</span></a>
-          </li>
-      </ul>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Bus Hire <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+<!--
       <div>
         <label for='dj'>Email </label>
-        <input type='email'  id='dj' name='dj' class="form-control" required [(ngModel)] ='email'/>
-    </div><br>
-      <button type='submit' class="btn-info"  >Profile</button>
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  >
-                                                 Profile
+        <input type='email' id='dj' name='dj' class="form-control" required [(ngModel)]='email' />
+      </div><br>
+      <button type='submit' class="btn-info">Profile</button>
+-->
+      <ul class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Profile
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#" [routerLink]="['/book/',id]" routerLinkActive="active">My Trips</a>
           <a class="dropdown-item" href="#" [routerLink]="['/profile/',email]" routerLinkActive="active">My Profile</a>
-          <a class="dropdown-item" href = "#">Change Password</a>
+          <a class="dropdown-item" href="#">Change Password</a>
           <a class="dropdown-item" href="#">Wallets</a>
           <a class="dropdown-item" href="#">Sign Out</a>
 
-          
+
         </div>
-      </li>
-      <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-              <a class="nav-link disabled" href="#">Help</a>
-          </li>
-          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Manage Booking
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Bus Tickets</a>
-              <a class="dropdown-item" href="#">Cancel</a>
-              <a class="dropdown-item" href="#">Reschedule</a>
-              <a class="dropdown-item" href="#">Show My Ticket</a>    
-              <a class="dropdown-item" href="#">Email/SMS</a>
-              </div>
-          </li>
-          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" ><span class="material-icons-two-tone">perm_identity</span></a>
-              <div class="dropdown-menu b-dropdown-icon" aria-labelledby="navbarDropdown1">
-                  <a class="dropdown-item" routerLink="/login" routerLinkActive="" href="#">Sign In/Sign Up</a>
-              </div>
-          </li>
       </ul>
-      </div>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Help</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Manage Booking
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Bus Tickets</a>
+            <a class="dropdown-item" href="#">Cancel</a>
+            <a class="dropdown-item" href="#">Reschedule</a>
+            <a class="dropdown-item" href="#">Show My Ticket</a>
+            <a class="dropdown-item" href="#">Email/SMS</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+            aria-haspopup="true"><span class="material-icons-two-tone">perm_identity</span></a>
+          <div class="dropdown-menu b-dropdown-icon" aria-labelledby="navbarDropdown1">
+            <a class="dropdown-item" routerLink="/login" routerLinkActive="" href="#">Sign In/Sign Up</a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>

@@ -32,11 +32,9 @@ export class PaymentComponent implements OnInit {
     modal: {
       ondismiss: (() => {
         this.zone.run(() => {
-<<<<<<< HEAD
+
           this.router.navigate(['PaymentComponent']);
-=======
-          // add current page routing if payment fails
->>>>>>> 8567de71f36e80ed04cda076612e785f66a171fe
+
         })
       })
     }
@@ -44,7 +42,7 @@ export class PaymentComponent implements OnInit {
 
   constructor(
     private zone: NgZone,
-<<<<<<< HEAD
+
     private paymentservice: PaymentServiceService,
     private router : Router
   ) {
@@ -53,16 +51,7 @@ export class PaymentComponent implements OnInit {
 
   initPay(): void {
     this.rzp = new this.paymentservice.nativeWindow['Razorpay'](this.options);
-=======
-    private winRef: PaymentServiceService,
-    private router : Router
-  ) {
-    this._window = this.winRef.nativeWindow;
-  }
-
-  initPay(): void {
-    this.rzp = new this.winRef.nativeWindow['Razorpay'](this.options);
->>>>>>> 8567de71f36e80ed04cda076612e785f66a171fe
+  
     this.rzp.open();
   }
 
