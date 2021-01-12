@@ -13,6 +13,7 @@ import { PayPalPaymentComponent } from './components/payment/pay-pal-payment/pay
 import { FormsModule } from '@angular/forms';
 import { PaymentSuccessComponent } from './components/payment/payment-success/payment-success.component';
 import {NgxPrintModule} from 'ngx-print';
+<<<<<<< HEAD
 
 import { WalletTopupSuccessComponent } from './components/wallet/wallet-topup-success/wallet-topup-success.component';
 import { WalletTopupComponent } from './components/wallet/wallet-topup/wallet-topup.component';
@@ -23,6 +24,13 @@ import { SearchComponent } from './components/Searchbus/search/search.component'
 import { BuslistComponent } from './components/Searchbus/buslist/buslist.component';
 import { BookingsComponent } from './components/bookings/bookings.component';
 
+=======
+import { RegisterComponent } from './components/register/register.component';
+import { ChangePasswordComponent } from './components/change-password/change-password.component';
+import { AddBusComponent } from './components/Admin/add-bus/add-bus.component';
+import { DeleteBusComponent } from './components/Admin/delete-bus/delete-bus.component';
+import { EditBusComponent } from './components/Admin/edit-bus/edit-bus.component';
+>>>>>>> 8329623ab4833409c7083fafbe4b8f835cafab4b
 
 
 @NgModule({
@@ -35,6 +43,7 @@ import { BookingsComponent } from './components/bookings/bookings.component';
     WalletPaymentComponent,
     PayPalPaymentComponent,
     PaymentSuccessComponent,
+<<<<<<< HEAD
 
     WalletTopupSuccessComponent,
     WalletTopupComponent,
@@ -44,6 +53,13 @@ import { BookingsComponent } from './components/bookings/bookings.component';
     BuslistComponent,
     BookingsComponent
 
+=======
+    RegisterComponent,
+    ChangePasswordComponent,
+   AddBusComponent,
+   DeleteBusComponent,
+   EditBusComponent
+>>>>>>> 8329623ab4833409c7083fafbe4b8f835cafab4b
   ],
   imports: [
     BrowserModule,

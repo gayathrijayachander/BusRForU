@@ -1,0 +1,36 @@
+<div class="col-md-4 offset-4 mt-6 card" style="background:darkgrey">
+    <div class="card-body">
+        <h1 class="h1 text-center">Delete Bus</h1>
+    <form #bus="ngForm" (ngSubmit) = "onSubmit(bus)">
+     
+        <div class="form-group">
+            <label for="Bus_Model" class="text-success">Bus Id</label>
+            <input type="number" name="Bus_Id" [(ngModel)]= 'bus.Bus_Id' required id="Bus_Id" class="form-control" required
+            placeholder="Enter Bus Id">
+            <input type="hidden" name="Bus_Model" id="Bus_Model" class="form-control" required
+            placeholder="Enter Bus Model">
+            <input type="hidden" name="date" id="date" class="form-control"
+            required placeholder="Enter date">
+            <input type="hidden" name="Depart_Time" id="Depart_Time" class="form-control"
+            required placeholder="Enter Depart Time">
+            <input type="hidden" name="Arrival_Time" id="Arrival_Time" class="form-control"
+                required placeholder="Enter Arrival Time">
+            <input type="hidden" name="Total_Seats" id="Total_Seats" class="form-control"
+                required placeholder="Enter Total Seats">
+            <input type="hidden" name="No_of_available_seats" id="No_of_available_seats" class="form-control"
+            required placeholder="Enter Number of Available Seats">
+            <input type="hidden" name="cost" id="cost" class="form-control" required
+            placeholder="Enter Ticket Price">
+            <input type="hidden" name="ExtraFeatures" id="ExtraFeatures" class="form-control" required
+            placeholder="Enter Extra Features">
+            <input type="hidden" name="Source" id="Source"
+            class="form-control" required placeholder="Enter Source">
+            <input type="hidden" name="destination" id="destination" class="form-control"
+            required placeholder="Enter Destination">
+            </div>
+            
+        <button type="submit" class="btn btn-primary float-right" >Delete Bus </button>
+    </form>
+    </div>
+</div>
+

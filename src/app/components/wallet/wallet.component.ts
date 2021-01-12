@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 
+
 @Component({
   selector: 'app-wallet',
   templateUrl: './wallet.component.html',
@@ -35,6 +36,7 @@ export class WalletComponent implements OnInit {
   }
   show(){
     this.isShow = false;
+
 
   }
 
