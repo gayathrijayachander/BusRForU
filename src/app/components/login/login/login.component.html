@@ -5,7 +5,7 @@
     <form [formGroup]="signInForm" (ngSubmit)= "onSubmit()">
         <div class="form-group">
           <label class="sr-only" for="emailId">Email address</label>
-          <input type="email" class="form-control" formControlName="emailId" id="emailId" aria-describedby="emailHelp" placeholder="Email">
+          <input type="email" class="form-control" formControlName="emailId" id="emailId" aria-describedby="emailHelp" placeholder="Email" [(ngModel)]='loginMail'>
           </div>
         <div class="form-group">
           <label class="sr-only" for="loginPassword">Password</label>

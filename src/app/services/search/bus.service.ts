@@ -23,8 +23,8 @@ export class BusService {
       return this.http.get<ICust[]>(this.url+"Getlist?src="+src+"&dest="+dest+"&date="+this.formatteDate,this.httpOptions); 
    }
 
-  getData(id:number): Observable<IBooking>{​​​​​
-    return this.http.get<IBooking>(this.url+'/GetBookings?id=' + id);
-  }​​​​​
+  getData(email:string): Observable<IBooking>{​​​​​
+    return this.http.get<IBooking>(this.url+"GetBookings?email="+email);
+  }​​​​​​​​​​
 
     ​​}​​    

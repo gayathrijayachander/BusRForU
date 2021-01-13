@@ -41,7 +41,7 @@ const routes: Routes = [
   { path: 'edit/:email', component: EditComponent },
   { path: 'header', component: HeaderComponent },
   { path: 'profile/:email', component: ProfileComponent },
-  { path: 'book/:id', component: BookingsComponent },
+  { path: 'book/:email', component: BookingsComponent },
   { path: 'buslist/:from/:to/:traveldate', component: BuslistComponent },
   {path : 'register',component : RegisterComponent},
   {path : 'change-password',component : ChangePasswordComponent},

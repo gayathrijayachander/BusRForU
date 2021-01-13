@@ -11,10 +11,10 @@
                 Account
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
-                      <a class="dropdown-item" href="#" [routerLink]="['/book/',email]" routerLinkActive="active">My Trips</a>
+                      <a class="dropdown-item" (click)="goToTrips()">My Trips</a>
                       <a class="dropdown-item" href="#" [routerLink]="['/profile/',email]" routerLinkActive="active">My Profile</a>
                       <a class="dropdown-item" href = "#">Change Password</a>
-                      <a class="dropdown-item" href="#">Wallets</a>
+                      <a class="dropdown-item" href="wallet">Wallets</a>
                       <a class="dropdown-item" href="#">Sign Out</a>
               
                     </div>

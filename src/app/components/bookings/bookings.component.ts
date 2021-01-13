@@ -10,17 +10,20 @@ import { BusService } from 'src/app/services/search/bus.service';
 })
 export class BookingsComponent implements OnInit {
   book:IBooking;
+  mail:string;
   constructor(private userdetails: BusService,private router: Router, private route : ActivatedRoute) {​​​​​​​ }​​​​​​​
-  getUserInfo(id:number): void{​​​​​​​
-    this.userdetails.getData(id).subscribe((data:IBooking)=>{​​​​​​​
+  getUserInfo(mail:string): void{​​​​​​​
+    this.userdetails.getData(mail).subscribe((data:IBooking)=>{​​​​​​​
       this.book = data;
       
     }​​​​​​​)
   }​​​​​​​
 
   ngOnInit(): void {
-    const id =+ this.route.snapshot.paramMap.get('id');
-    this.getUserInfo(id);
+    const mail = this.route.snapshot.paramMap.get('email');
+    console.log(mail);
+    this.mail=mail;
+    this.getUserInfo(mail);
   }
 
 }

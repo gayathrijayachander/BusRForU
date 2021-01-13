@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import {UserService} from '../../../services/user/user.service';
 
 @Component({
   selector: 'app-user',
@@ -8,11 +9,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class UserComponent implements OnInit {
 email : string;
-  constructor(private router: Router, private route : ActivatedRoute) { }
+  constructor(private router: Router, private route : ActivatedRoute, private userservice : UserService) { }
 
   ngOnInit(): void {
     const mail = this.route.snapshot.paramMap.get('email');
-    this.email = mail;
+    this.email = "imgayu4699@gmail.com";
   }
 
+  goToTrips(){
+    this.router.navigate(['/book/',this.email]);
+  }
 }
