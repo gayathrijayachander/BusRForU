@@ -51,7 +51,7 @@ export class WalletTopupComponent implements OnInit {
     modal: {
       ondismiss: (() => {
         this.zone.run(() => {
-          this.router.navigate(['PaymentComponent']);
+          this.router.navigate(['wallet']);
         })
       })
     }

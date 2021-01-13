@@ -1,0 +1,43 @@
+<div class="container-fluid b-book-schedule">
+    <div *ngIf="info" class="alert alert-info" role="alert">
+        Please select the seats to proceed.
+    </div>
+    <div class="row">
+        <p class="b-book-schedule-header">Please select seats</p>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="bus-cabin">
+                <ol>
+                    <li class="row-1" >
+                      <ol class="seats" *ngFor = "let seats of seatsInArray; index as j">
+                        <li class="seat" *ngFor = "let seat of seats; index as i" [ngClass]= "{' margin-left': (i+3)%5 == 0 }" (click)= "toggle($event, seat)">
+                            <label for="{{seat.seat_id}}" [ngClass]= "seat.available ? 'b-available' : 'b-booked'">{{seat.seat_id}}</label>
+                        </li>
+                      </ol>
+                    </li>
+                </ol>
+              </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="b-legend-info">
+                <p class="b-legend">Seat Legend</p>
+                <div class= "b-seat-legend">
+                    <div class="b-info-btn b-available"></div><div class="b-btn-info">Available</div>
+                </div>
+                <div class= "b-seat-legend">
+                    <div class="b-info-btn b-selected"></div><div class="b-btn-info">Selected</div>
+                </div>
+                <div class= "b-seat-legend">
+                    <div class="b-info-btn b-booked"></div><div class="b-btn-info">Booked</div>
+                </div>
+                <div class= "b-seat-legend">
+                   <div class="b-info-btn b-disabled"></div><div class="b-btn-info">Disabled</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="float-right">
+        <button  class="btn btn-primary" (click) = "updateSeat()">Proceed with Booking</button>
+    </div>
+</div>

@@ -20,7 +20,10 @@ import {EditBusComponent} from './components/Admin/edit-bus/edit-bus.component';
 import {DeleteBusComponent} from './components/Admin/delete-bus/delete-bus.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-
+import { LoginComponent } from './components/login/login/login.component';
+import { SearchComponent } from './components/Searchbus/search/search.component';
+import { ProceedBookingComponent } from './components/proceed-booking/proceed-booking.component';
+import { BookScheduleComponent } from './components/book-schedule/book-schedule.component';
 
 const routes: Routes = [
 
@@ -45,6 +48,10 @@ const routes: Routes = [
  {path : 'delete-bus',component : DeleteBusComponent},
  { path: 'resetpassword/:mail', component: ResetPasswordComponent },
  { path: 'forgotpassword', component: ForgotPasswordComponent },
+ { path: 'login', component: LoginComponent },
+ { path: 'search', component: SearchComponent },
+ { path: 'bookschedule', component: BookScheduleComponent },
+ { path: 'proceedbooking', component: ProceedBookingComponent },
 ];
 
 @NgModule({

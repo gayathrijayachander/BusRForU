@@ -7,7 +7,7 @@ import {Observable, of} from 'rxjs';
 })
 export class AuthService {
 
-  url = "http://localhost:62677/api/auth";
+  url = "http://localhost/BusRForU/api/Auth";
   constructor(private httpClient: HttpClient) { }
 
   //Login Authetication

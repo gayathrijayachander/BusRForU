@@ -12,13 +12,12 @@
     </thead>
     <tbody>
         <tr *ngFor="let bus of buslist">
-            <td >{{bus.Bid}}</td>
+            <td>{{bus.Bid}}</td>
             <td scope="row">{{bus.Source}}</td>
             <td scope="row">{{bus.To}}</td>
             <td scope="row">{{bus.date}}</td>
-            
-            
-            <button class="btn btn-primary" >Book</button>
+                       
+            <button class="btn btn-primary" (click) ="onClick(bus.Bid)" >Book</button>
             
         </tr>
     </tbody>

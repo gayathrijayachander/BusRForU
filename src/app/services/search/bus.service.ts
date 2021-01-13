@@ -15,7 +15,7 @@ export class BusService {
   formattedDate2=formatDate(this.mydate,this.format,this.locale)
   formatteDate
 
-   url = 'http://localhost/BusForU/api/Search/';
+   url = 'http://localhost/BusRForU/api/Search/';
     httpOptions={​​    headers :new HttpHeaders({​​'Content-Type':'application/json'}​​)  }​​;  
   constructor(private http:HttpClient) {​​ }​​ 
    getBuslist(src:string,dest:string,date:Date): Observable<ICust[]>{​​  

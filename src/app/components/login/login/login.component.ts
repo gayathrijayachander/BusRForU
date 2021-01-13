@@ -39,7 +39,14 @@ export class LoginComponent implements OnInit {
     this.authService.getUserAuthentication(obj)
      .subscribe(data => { 
        this.authObject = data;
-       this.router.navigateByUrl("/", {state: {data:this.authObject}});
+       if(this.authObject.role == "User")
+       {
+        this.router.navigateByUrl("/search", {state: {data:this.authObject}});
+       }
+       else{
+        this.router.navigateByUrl("/edit-bus", {state: {data:this.authObject}});
+       }
+      
       });
   }
 }

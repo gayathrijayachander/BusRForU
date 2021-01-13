@@ -28,6 +28,9 @@ import { EditBusComponent } from './components/Admin/edit-bus/edit-bus.component
 import { LoginComponent } from './components/login/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { BookScheduleComponent } from './components/book-schedule/book-schedule.component';
+import { ProceedBookingComponent } from './components/proceed-booking/proceed-booking.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -54,7 +57,10 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
    EditBusComponent,
    LoginComponent,
    ForgotPasswordComponent,
-   ResetPasswordComponent
+   ResetPasswordComponent,
+   BookScheduleComponent,
+   ProceedBookingComponent,
+   FooterComponent
   ],
   imports: [
     BrowserModule,
