@@ -1,0 +1,15 @@
+<div class="col-md-4 offset-4 mt-6 card" style="background:darkgrey">
+    <div class="card-body">
+        <h1 class="h1 text-center">Edit Bus</h1>
+    <form>
+     
+        <div class="form-group">
+            <label for="Bus_Model" class="text-success">Bus Id</label>
+            <input type="number" name="Bus_Id" [(ngModel)]= 'Bus_Id' required id="Bus_Id" class="form-control" required
+            placeholder="Enter Bus Id">
+        </div>
+            
+        <button type="submit" class="btn btn-primary float-right" [routerLink]="['/edit-bus/', Bus_Id]" routerLinkActive="active" >Edit Bus </button>
+    </form>
+    </div>
+</div>

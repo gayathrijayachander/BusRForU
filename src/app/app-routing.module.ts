@@ -24,6 +24,9 @@ import { LoginComponent } from './components/login/login/login.component';
 import { SearchComponent } from './components/Searchbus/search/search.component';
 import { ProceedBookingComponent } from './components/proceed-booking/proceed-booking.component';
 import { BookScheduleComponent } from './components/book-schedule/book-schedule.component';
+import { UserComponent } from './components/MainDashboard/user/user.component';
+import { AdminComponent } from './components/MainDashboard/admin/admin.component';
+import { EditAdminComponent } from './components/Admin/edit-admin/edit-admin.component';
 
 const routes: Routes = [
 
@@ -32,7 +35,7 @@ const routes: Routes = [
   { path: 'walletPayment', component: WalletPaymentComponent },
   { path: 'paypal', component: PayPalPaymentComponent },
   { path: 'paymentSuccess', component: PaymentSuccessComponent },
-  { path: 'payment', component: PaymentComponent },
+  { path: 'payment/:amount', component: PaymentComponent },
   { path: 'walletTopup/:amount/:id', component: WalletTopupComponent },
   { path: 'topupSuccess', component: WalletTopupSuccessComponent },
   { path: 'edit/:email', component: EditComponent },
@@ -43,7 +46,7 @@ const routes: Routes = [
   {path : 'register',component : RegisterComponent},
   {path : 'change-password',component : ChangePasswordComponent},
   {path : 'add-bus',component : AddBusComponent},
- {​​​​​ path:'edit/:id', component:EditBusComponent }​​​​​,
+ {​​​​​ path: 'edit-bus/:id', component:EditBusComponent }​​​​​,
  {path : 'edit-bus',component : EditBusComponent},
  {path : 'delete-bus',component : DeleteBusComponent},
  { path: 'resetpassword/:mail', component: ResetPasswordComponent },
@@ -52,6 +55,9 @@ const routes: Routes = [
  { path: 'search', component: SearchComponent },
  { path: 'bookschedule', component: BookScheduleComponent },
  { path: 'proceedbooking', component: ProceedBookingComponent },
+ {path : 'admin',component : AdminComponent},
+ {path : 'user/:email',component : UserComponent},
+ {path : 'edit-admin',component : EditAdminComponent},
 ];
 
 @NgModule({

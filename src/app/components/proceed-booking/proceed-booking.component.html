@@ -136,31 +136,31 @@
     </div> -->  
     <div class="b-details-form">
         <h6>Please fill the passengers details</h6>
-        <form [formGroup]="infoForm">
+        <form [formGroup]="infoForm" (ngSubmit)= "onSubmit()">
             <div formArrayName="travelers" *ngFor = "let k of travelers.controls; index as j">
                 <form formGroupName= {{j}}>
                     <div class="row">
                         <div class="form-group col-2">
-                            <input type="text" class="form-control" formControlName="name" placeholder="Name">
+                            <input type="text" class="form-control" formControlName="First_Name" placeholder="First Name">
+                        </div>
+                        <div class="form-group col-2">
+                            <input type="text" class="form-control" formControlName="Last_Name" placeholder="Last Name">
+                        </div>
+                        <div class="form-group col-2">
+                            <input type="text" class="form-control" formControlName="Gender" placeholder="Gender">
                         </div>
                         <div class="form-group col-2">
                             <input type="text" class="form-control" formControlName="age" placeholder="Age">
                         </div>
-                        <div class="form-group col-2">
-                            <input type="text" class="form-control" formControlName="email" placeholder="Email">
-                        </div>
-                        <div class="form-group col-2">
-                            <input type="text" class="form-control" formControlName="phone" placeholder="Phone">
-                        </div>
-                        <div class="form-group col-2">
+                        <!-- <div class="form-group col-2">
                             <input type="text" class="form-control" formControlName="idNumber" placeholder="Any Public Id no.">
-                        </div>
+                        </div> -->
                     </div>
                 </form>
             </div>
         </form>
     </div>
     <div class="float-right">
-        <a type="submit" href="" class="btn btn-primary" (click)="onSubmit()"> Procced </a>
+        <a type="submit" (click) ="onSubmit()" class="btn btn-primary"> Procced </a>
     </div>
 </div>

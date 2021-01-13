@@ -10,7 +10,7 @@ import {ISignup} from '../../Models/isignup';
 
 export class SignupServiceService {
  
-  url = 'http://localhost/BusForU/api/SignUp/';
+  url = 'http://localhost/BusRForU/api/Register/';
   httpOptions={
     headers :new HttpHeaders({'Content-Type':'application/json'})
   };

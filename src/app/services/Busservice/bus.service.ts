@@ -10,7 +10,7 @@ import { IEdit } from '../../Models/iedit';
 
 export class BusServiceService {
 
-  url = 'http://localhost/BusForU/api/Bus/';
+  url = 'http://localhost/BusRForU/api/Bus/';
   httpOptions={
     headers :new HttpHeaders({'Content-Type':'application/json'})
   };

@@ -6,7 +6,7 @@ import {Observable,of} from 'rxjs' ;
   providedIn: 'root'
 })
 export class UserService {
-  url='http://localhost/BusRForU/api/SignUp';
+  url='http://localhost/BusRForU/api/Register';
   httpOptions={
     headers :new HttpHeaders({'Content-Type':'application/json'})
   };

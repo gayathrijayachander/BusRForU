@@ -31,6 +31,9 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 import { BookScheduleComponent } from './components/book-schedule/book-schedule.component';
 import { ProceedBookingComponent } from './components/proceed-booking/proceed-booking.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { UserComponent } from './components/MainDashboard/user/user.component';
+import { AdminComponent } from './components/MainDashboard/admin/admin.component';
+import { EditAdminComponent } from './components/Admin/edit-admin/edit-admin.component';
 
 
 @NgModule({
@@ -60,7 +63,10 @@ import { FooterComponent } from './components/footer/footer.component';
    ResetPasswordComponent,
    BookScheduleComponent,
    ProceedBookingComponent,
-   FooterComponent
+   FooterComponent,
+   UserComponent,
+   AdminComponent,
+   EditAdminComponent
   ],
   imports: [
     BrowserModule,

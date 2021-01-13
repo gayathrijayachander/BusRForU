@@ -55,6 +55,7 @@ export class BookScheduleComponent implements OnInit {
   updateSeat()
     {
       this.commonService.bookingDetails.selectedSeats = this.selectedSeats;
+      this.commonService.bookingDetails.totalFare = this.commonService.bookingDetails.noOfPassengers * this.commonService.bookingDetails.Fare;
       if(this.selectedSeats.length > 0)
       {
         this.router.navigate(['proceedbooking']); 

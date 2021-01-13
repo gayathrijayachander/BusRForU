@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {WalletServiceService} from '../../../services/Wallet/wallet-service.service';
 import { IWallet} from '../../../models/iwallet';
+import {CommonServiceService} from '../../../services/commonservice/common-service.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -18,7 +19,7 @@ export class WalletPaymentComponent implements OnInit {
   balance : number ;
   billAmount : number ;
   
-  constructor(private walletservice : WalletServiceService, private router: Router) 
+  constructor(private walletservice : WalletServiceService, private router: Router , private commonservice : CommonServiceService) 
   { 
     this.walletservice.getWalletBalance(this.id).subscribe((data: IWallet) => {this.walletinfo = data;  this.balance = data.Balance;});   
   }
@@ -28,7 +29,7 @@ export class WalletPaymentComponent implements OnInit {
 
   initPayment() :void
   {
-     this.billAmount = (this.fare * this.personCount);
+     this.billAmount = this.commonservice.bookingDetails.totalFare; // get
      if(this.balance >= this.billAmount)
      {
       this.walletinfo.Balance = this.balance - this.billAmount;

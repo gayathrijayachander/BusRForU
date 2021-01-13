@@ -1,5 +1,6 @@
 import { NumberSymbol, Time } from "@angular/common";
 import {seatDetails} from "./seat-Details";
+import {passangers} from "./passangers";
 
  export class bookingDetails{
    noOfPassengers:number =0;
@@ -15,6 +16,6 @@ import {seatDetails} from "./seat-Details";
    ExtraFeatures:string="";
    Source:string="";
    destination:string ="";
-   TotalFare:number=0;
    selectedSeats:seatDetails[]=[];
+   passangers:passangers[] = [];
 }

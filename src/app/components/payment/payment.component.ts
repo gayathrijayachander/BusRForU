@@ -1,6 +1,6 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import {PaymentServiceService,ICustomWindow} from '../../services/Payment/payment-service.service';
-import {Router} from '@angular/router';
+import {Router, ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-payment',
@@ -15,11 +15,13 @@ export class PaymentComponent implements OnInit {
   private _window: ICustomWindow;
   public rzp: any;
 
+  totalfare : number = + this.route.snapshot.paramMap.get('amount');
+
   public options: any = {
     key: 'rzp_test_QvrExmj5fby6T6', // add razorpay key here
     name: 'BusRForU',
     description: 'Confirm your Booking, by Proceeding with payment',
-    amount: 100, // razorpay takes amount in paisa
+    amount: this.totalfare * 100, // razorpay takes amount in paisa
     prefill: {
       name: '',
       email: '', // email id
@@ -41,9 +43,11 @@ export class PaymentComponent implements OnInit {
   constructor(
     private zone: NgZone,
     private paymentservice: PaymentServiceService,
-    private router : Router
+    private router : Router,
+    private route : ActivatedRoute
   ) {
     this._window = this.paymentservice.nativeWindow;
+
   }
 
   initPay(): void {
