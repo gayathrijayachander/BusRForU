@@ -13,9 +13,9 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
                       <a class="dropdown-item" (click)="goToTrips()">My Trips</a>
                       <a class="dropdown-item" href="#" [routerLink]="['/profile/',email]" routerLinkActive="active">My Profile</a>
-                      <a class="dropdown-item" href = "#">Change Password</a>
+                      <a class="dropdown-item" [routerLink]="['/change-password/',email]">Change Password</a> 
                       <a class="dropdown-item" href="wallet">Wallets</a>
-                      <a class="dropdown-item" href="#">Sign Out</a>
+                      <a class="dropdown-item" href="/">Sign Out</a>
               
                     </div>
             </li>
@@ -24,3 +24,5 @@
         </ul>
     </nav>
     </div>
+    <app-search></app-search>
+    <router-outlet></router-outlet>

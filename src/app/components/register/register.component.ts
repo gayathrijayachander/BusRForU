@@ -17,7 +17,9 @@ export class RegisterComponent implements OnInit {
     Email_id : null,
     Password : null,
     Contact_Number : null,
-    Address : null
+    Address : null,
+      Gender : null,
+      Dob : null
   };
   
   constructor(private signupservice: SignupServiceService,private router: Router ) { }

@@ -1,3 +1,5 @@
+<p>{{rn}}</p>
+
 <div class="container" >
     <img src="../../../../assets/success.png" alt="Wallet Image" height="100px" width="100px" class="rounded mx-auto d-block">
    <div style="text-align: center;"> <h4 style="color:green;">Your Payment was successfull</h4> </div>
@@ -28,7 +30,7 @@
             <hr>
         </tr>
         <br>
-        <tr *ngFor="let booking of booking" style="height: 50px;">
+        <tr *ngFor="let booking of passengers" style="height: 50px;">
             <td style="width: 200px; text-align: center; ">{{booking.First_Name}} {{booking.Last_Name}}</td>
             <td style="width: 200px; text-align: center;">{{booking.Gender}}</td>
             <td style="width: 200px; text-align: center;">{{booking.Age}}</td>

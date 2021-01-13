@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
        {
         this.userservice.mailId = this.loginMail;
         console.log("login page"+ this.userservice.mailId);
-        this.router.navigateByUrl("/search", {state: {data:this.authObject}});
+        this.router.navigate(['user/',this.loginMail]);
        }
        else{
         this.router.navigateByUrl("/edit-bus", {state: {data:this.authObject}});

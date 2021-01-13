@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormGroup, FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
+import { passangers } from 'src/app/models/passangers';
 import {CommonServiceService} from '../../services/commonservice/common-service.service';
 
 @Component({
@@ -10,16 +11,16 @@ import {CommonServiceService} from '../../services/commonservice/common-service.
 })
 export class ProceedBookingComponent implements OnInit {
 
+  passDetail : any[] = [];
+  totalseat : number = + this.route.snapshot.paramMap.get("seat")
+  
   details:any
   infoForm: FormGroup
-  constructor(private fb: FormBuilder, private router: Router, private commonService: CommonServiceService) { }
-
+  constructor(private fb: FormBuilder, private router: Router, private commonService: CommonServiceService ,private route : ActivatedRoute) { }
 
   ngOnInit(): void {
     this.initializeFrom();
     this.getBookingDetails();
-    
-
   }
 
 
@@ -43,12 +44,19 @@ export class ProceedBookingComponent implements OnInit {
         First_Name:"",
         Last_Name:"",
         Gender:"",
-        age:"",
+        age:""
       //  idNumber:""
+     
       }))
-
-      console.log(this.travelers);
-    }
+      if(i == this.details.noOfPassengers-1)
+      {
+      console.log(this.travelers.controls);
+      console.log(this.travelers.controls[0].value);
+      console.log(this.travelers.controls[1].value);
+      }
+      console.log(this.infoForm.value.travellers);
+  
+    }  
       
   }
   
@@ -61,12 +69,19 @@ export class ProceedBookingComponent implements OnInit {
 
   }
   updateBookingDetails(): void{
+    for(let i=0;i<this.details.noOfPassengers;i++){
+      this.passDetail.push(this.travelers.controls[i].value);
+      console.log(this.travelers.controls[i].value);
+    }
+    console.log("passdetails"+this.passDetail);
     this.commonService.bookingDetails.passangers = this.infoForm.value.travellers;
+    console.log("----------------------passenger detail");
+    console.log(this.commonService.bookingDetails.passangers);
   }
   onSubmit():void {
     
     this.updateBookingDetails();
-    console.log( "amount"+this.commonService.bookingDetails.totalFare);
+    console.log( "fare"+this.commonService.bookingDetails.totalFare);
     this.router.navigate(['payment/', this.commonService.bookingDetails.totalFare])
   }
 }

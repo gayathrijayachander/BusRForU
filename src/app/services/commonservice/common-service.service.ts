@@ -1,6 +1,7 @@
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { passangers } from 'src/app/models/passangers';
 import { bookingDetails } from '../../models/booking-details';
 
 @Injectable({
@@ -8,6 +9,7 @@ import { bookingDetails } from '../../models/booking-details';
 })
 export class CommonServiceService {
 
+  passengersDetails : passangers[];
   
   //id:any=1;
   url = "http://localhost/BusRForU/api/seatDetails";
@@ -15,6 +17,7 @@ export class CommonServiceService {
     headers: new HttpHeaders({'Content-Type':'application/json'})
   };
   bookingDetails:bookingDetails = new bookingDetails();
+  
   constructor(private httpClient: HttpClient) { }
 
     //Login Authetication

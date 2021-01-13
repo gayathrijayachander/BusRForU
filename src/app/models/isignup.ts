@@ -6,5 +6,7 @@ export interface ISignup  {
     Password : string;
     Contact_Number : number;
     Address : string;
+    Gender : string;
+    Dob : Date
 }
 

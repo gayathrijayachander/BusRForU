@@ -1,23 +1,19 @@
 
 
-<div class="col-md-4 offset-4 mt-6 card" style="margin-top: 10px;background :seashell">    
+<div class="col-md-4 offset-4 mt-6 card" style="margin-top: 10px;">    
     <div >    
        <h1 class="h1 text-center">My Profile</h1>  
       <form #userForm='ngForm' (ngSubmit)='saveUser(user)'>   
-        
-        
-        
-        
-        
+              
         <div class='form-group'   >
-          <label for='First_Name'>First Name: </label>
+          <label for='First_Name'>First Name  : </label>
           <input  type='text' id='First_Name' name='First_Name' class="form-control" required [(ngModel)]='user.First_Name' #namecontrol='ngModel' />
           <!-- <span class="help-block alert-danger" *ngIf='idcontrol.touched && idcontrol.invalid'>
               ID Cannot be blank
           </span> -->
       </div>
       <div class='form-group' >
-          <label for='Last_Name'>Last Name: </label>
+          <label for='Last_Name'>Last Name  : </label>
           <input  type='text' id='Last_Name' name='Last_Name' class="form-control" required  [(ngModel)]='user.Last_Name' #namecontrol='ngModel'  />
           <!-- <span class="help-block alert-danger" *ngIf='idcontrol.touched && idcontrol.invalid'>
               ID Cannot be blank
@@ -29,6 +25,18 @@
           <input  type='email' id='Email' name='Email' class="form-control" [(ngModel)]='user.Email_id' readonly  />
           
       </div>
+
+      <div class='form-group'>
+        <label for='Gender'>Gender </label>
+        <input  type='text' id='Gender' name='Gender' class="form-control" [(ngModel)]='user.Gender' />
+      
+        
+    </div>
+
+    <div>
+      <label for='Dob'>Dob &nbsp;</label>
+      <input  type='date' id='Dob' name='Dob'class="form-control" [(ngModel)]='user.Dob'/><br>
+    </div>
       <!--<div>Gender</div>
       <div class='form-group'>
           <label for='Name'>Male </label>
@@ -55,12 +63,8 @@
       
       <div>
         <button type="submit" class=" btn-info" >Save </button>    
-      
-
-      
-      </div>
-         
-         
+            
+      </div>                 
        </form>  
       
       <button type="submit" class=" btn-info"  style="float: right;" [routerLink]="['/profile/',mail]">Cancel </button>    

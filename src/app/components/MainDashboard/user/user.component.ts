@@ -13,7 +13,7 @@ email : string;
 
   ngOnInit(): void {
     const mail = this.route.snapshot.paramMap.get('email');
-    this.email = "imgayu4699@gmail.com";
+    this.email = mail;
   }
 
   goToTrips(){

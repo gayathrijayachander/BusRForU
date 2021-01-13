@@ -34,6 +34,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { UserComponent } from './components/MainDashboard/user/user.component';
 import { AdminComponent } from './components/MainDashboard/admin/admin.component';
 import { EditAdminComponent } from './components/Admin/edit-admin/edit-admin.component';
+import { PassengerComponent } from './components/passenger/passenger.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { EditAdminComponent } from './components/Admin/edit-admin/edit-admin.com
    FooterComponent,
    UserComponent,
    AdminComponent,
-   EditAdminComponent
+   EditAdminComponent,
+   PassengerComponent
   ],
   imports: [
     BrowserModule,

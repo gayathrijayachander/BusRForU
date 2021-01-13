@@ -6,6 +6,8 @@
             <th scope="col">From</th>
             <th scope="col">To</th>
             <th scope="col">Departure Date</th>
+            <th scope="col">Departure Time</th>
+            <th scope="col">Fare</th>
             
             <th></th>
         </tr>
@@ -15,7 +17,10 @@
             <td>{{bus.Bid}}</td>
             <td scope="row">{{bus.Source}}</td>
             <td scope="row">{{bus.To}}</td>
-            <td scope="row">{{bus.date}}</td>
+            <td scope="row">{{bus.date  | date : 'longDate'}}</td>
+            <td scope="row">{{bus.Depart_Time}}</td>
+            <td scope="row">{{bus.Fare}}</td>
+            
                        
             <button class="btn btn-primary" (click) ="onClick(bus.Bid)" >Book</button>
             
