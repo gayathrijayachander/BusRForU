@@ -9,6 +9,8 @@ import { bookingDetails } from '../../models/booking-details';
 })
 export class CommonServiceService {
 
+  passDetail : any;
+
   passengersDetails : passangers[];
   
   //id:any=1;
@@ -17,7 +19,7 @@ export class CommonServiceService {
     headers: new HttpHeaders({'Content-Type':'application/json'})
   };
   bookingDetails:bookingDetails = new bookingDetails();
-  
+
   constructor(private httpClient: HttpClient) { }
 
     //Login Authetication

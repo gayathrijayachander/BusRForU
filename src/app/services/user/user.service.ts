@@ -8,7 +8,9 @@ import {IChange} from '../../models/ichange';
   providedIn: 'root'
 })
 export class UserService {
+
   mailId : string ;
+
   url='http://localhost/BusRForU/api/Register';
   httpOptions={
     headers :new HttpHeaders({'Content-Type':'application/json'})

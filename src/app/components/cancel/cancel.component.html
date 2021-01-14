@@ -1,0 +1,13 @@
+<div  class="b-sign-up-body mx-auto" style="padding: 20px; border-radius: 5px;">
+    <form #signupForm='ngForm' (ngSubmit)='savecancel(Transaction_id)'>
+    <h1 class="h1 text-center" style="font-family: serif; color: crimson;">Cancel Ticket</h1>
+    <div class="form-group col-4" style="margin-left: 400px;">
+        <label for="Transaction_id" class="text-info">Transaction id</label>
+        <input type="text" name="Transaction_id"  required  id="Transaction_id" class="form-control"
+         required placeholder="Transaction id" [(ngModel)]='Transaction_id'>
+         </div>
+         <div style="text-align:center">
+            <button type="submit" class="btn btn-success">Cancel </button>
+          </div>
+    </form>
+</div>

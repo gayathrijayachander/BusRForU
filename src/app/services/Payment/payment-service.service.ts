@@ -15,6 +15,9 @@ function getWindow(): any {
   providedIn: 'root'
 })
 export class PaymentServiceService {
+
+  modeofpayment : string;
+  paymentDetails : IPayment;
   url = 'http://localhost/BusRForU/api/Payment/';
   httpOptions = {
                   headers: new HttpHeaders({'Content-Type':'application/json'})
@@ -30,4 +33,11 @@ export class PaymentServiceService {
     return this.http.get<IPayment>(this.url+"GetTransactionDetail/"+id);
   }
 
+  makeTransaction(payment :IPayment):Observable<string>
+  {
+    return this.http.post<string>(this.url+"maketransaction/",payment,this.httpOptions);
+  }
+  cancel(id:any):Observable<any>{
+    return this.http.delete<any>(this.url+'/Delete?Transaction_id='+id);
+ }
 }

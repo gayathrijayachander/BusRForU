@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {WalletServiceService} from '../../../services/Wallet/wallet-service.service';
 import { IWallet} from '../../../models/iwallet';
 import {CommonServiceService} from '../../../services/commonservice/common-service.service';
+import {PaymentServiceService} from '../../../services/Payment/payment-service.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -19,9 +20,11 @@ export class WalletPaymentComponent implements OnInit {
   balance : number ;
   billAmount : number ;
   
-  constructor(private walletservice : WalletServiceService, private router: Router , private commonservice : CommonServiceService) 
+  constructor(private walletservice : WalletServiceService, private router: Router , private commonservice : CommonServiceService , private paymentservice :PaymentServiceService) 
   { 
-    this.walletservice.getWalletBalance(this.id).subscribe((data: IWallet) => {this.walletinfo = data;  this.balance = data.Balance;});   
+    this.walletservice.getWalletBalance(this.id).subscribe((data: IWallet) => {this.walletinfo = data;  this.balance = data.Balance;});
+    this.paymentservice.modeofpayment = "wallet";
+       
   }
 
   ngOnInit(): void {

@@ -35,6 +35,8 @@ import { UserComponent } from './components/MainDashboard/user/user.component';
 import { AdminComponent } from './components/MainDashboard/admin/admin.component';
 import { EditAdminComponent } from './components/Admin/edit-admin/edit-admin.component';
 import { PassengerComponent } from './components/passenger/passenger.component';
+import { CancelComponent } from './components/cancel/cancel.component';
+import { HelpComponent } from './components/help/help.component';
 
 
 @NgModule({
@@ -68,7 +70,9 @@ import { PassengerComponent } from './components/passenger/passenger.component';
    UserComponent,
    AdminComponent,
    EditAdminComponent,
-   PassengerComponent
+   PassengerComponent,
+   CancelComponent,
+   HelpComponent
   ],
   imports: [
     BrowserModule,

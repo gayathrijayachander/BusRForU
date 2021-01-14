@@ -18,13 +18,13 @@ export class PaymentComponent implements OnInit {
   totalfare : number = + this.route.snapshot.paramMap.get('amount');
 
   public options: any = {
-    key: 'rzp_test_QvrExmj5fby6T6', // add razorpay key here
+    key: 'rzp_test_QvrExmj5fby6T6', //  razorpay key 
     name: 'BusRForU',
     description: 'Confirm your Booking, by Proceeding with payment',
-    amount: this.totalfare * 100, // razorpay takes amount in paisa
+    amount: this.totalfare * 100, //amount in paisa
     prefill: {
       name: '',
-      email: '', // email id
+      email: '', 
     },
     notes: {},
     theme: {
@@ -47,7 +47,7 @@ export class PaymentComponent implements OnInit {
     private route : ActivatedRoute
   ) {
     this._window = this.paymentservice.nativeWindow;
-
+    this.paymentservice.modeofpayment = "razorpay";
   }
 
   initPay(): void {

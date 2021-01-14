@@ -46,6 +46,9 @@ export class LoginComponent implements OnInit {
         console.log("login page"+ this.userservice.mailId);
         this.router.navigate(['user/',this.loginMail]);
        }
+       else if(this.authObject.role == "Admin"){
+        this.router.navigate(['admin/',this.loginMail]);
+       }
        else{
         this.router.navigateByUrl("/edit-bus", {state: {data:this.authObject}});
        }

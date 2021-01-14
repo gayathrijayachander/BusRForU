@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormGroup, FormBuilder } from '@angular/forms';
 import { Router,ActivatedRoute } from '@angular/router';
 import { passangers } from 'src/app/models/passangers';
+import {IPayment} from '../../models/ipayment';
 import {CommonServiceService} from '../../services/commonservice/common-service.service';
+import {UserService} from '../../services/user/user.service';
 
 @Component({
   selector: 'app-proceed-booking',
@@ -11,12 +13,16 @@ import {CommonServiceService} from '../../services/commonservice/common-service.
 })
 export class ProceedBookingComponent implements OnInit {
 
-  passDetail : any[] = [];
+  passDetail : any = [];
   totalseat : number = + this.route.snapshot.paramMap.get("seat")
-  
+  email: string ;
+
   details:any
   infoForm: FormGroup
-  constructor(private fb: FormBuilder, private router: Router, private commonService: CommonServiceService ,private route : ActivatedRoute) { }
+  constructor(private fb: FormBuilder, private router: Router, private commonService: CommonServiceService ,private route : ActivatedRoute, private userservice : UserService) 
+  {
+    this.email = this.userservice.mailId;
+   }
 
   ngOnInit(): void {
     this.initializeFrom();
@@ -69,12 +75,16 @@ export class ProceedBookingComponent implements OnInit {
 
   }
   updateBookingDetails(): void{
+
     for(let i=0;i<this.details.noOfPassengers;i++){
       this.passDetail.push(this.travelers.controls[i].value);
       console.log(this.travelers.controls[i].value);
     }
-    console.log("passdetails"+this.passDetail);
+
+    this.commonService.passDetail = this.passDetail;
+    console.log("passdetails"+this.passDetail[0].age);
     this.commonService.bookingDetails.passangers = this.infoForm.value.travellers;
+    this.userservice.mailId = this.email;
     console.log("----------------------passenger detail");
     console.log(this.commonService.bookingDetails.passangers);
   }

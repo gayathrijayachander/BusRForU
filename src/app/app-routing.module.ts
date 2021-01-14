@@ -27,10 +27,13 @@ import { BookScheduleComponent } from './components/book-schedule/book-schedule.
 import { UserComponent } from './components/MainDashboard/user/user.component';
 import { AdminComponent } from './components/MainDashboard/admin/admin.component';
 import { EditAdminComponent } from './components/Admin/edit-admin/edit-admin.component';
+import { CancelComponent } from './components/cancel/cancel.component';
+import { HelpComponent } from './components/help/help.component';
 
 const routes: Routes = [
 
   { path: '', component: DashboardComponent },
+  { path: 'aboutus', component: HelpComponent },
   { path: 'wallet', component:  WalletComponent  },
   { path: 'walletPayment', component: WalletPaymentComponent },
   { path: 'paypal', component: PayPalPaymentComponent },
@@ -55,9 +58,10 @@ const routes: Routes = [
  { path: 'search', component: SearchComponent },
  { path: 'bookschedule', component: BookScheduleComponent },
  { path: 'proceedbooking/:seat', component: ProceedBookingComponent },
- {path : 'admin',component : AdminComponent},
+ {path : 'admin/:email',component : AdminComponent},
  {path : 'user/:email',component : UserComponent},
  {path : 'edit-admin',component : EditAdminComponent},
+ { path: 'cancelticket', component: CancelComponent },
 ];
 
 @NgModule({

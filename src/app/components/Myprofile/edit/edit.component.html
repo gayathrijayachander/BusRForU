@@ -61,12 +61,12 @@
           <input  type='tel' id='Contact_Number' name='Contact_Number'class="form-control" [(ngModel)]='user.Contact_Number' required/><br>
       </div>
       
-      <div>
+      <div style="margin-left: 15px;">
         <button type="submit" class=" btn-info" >Save </button>    
             
       </div>                 
        </form>  
       
-      <button type="submit" class=" btn-info"  style="float: right;" [routerLink]="['/profile/',mail]">Cancel </button>    
+      <button type="submit" class=" btn-info" [routerLink]="['/profile/',mail]">Cancel </button>    
       </div>  
     </div>
